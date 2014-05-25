@@ -1,4 +1,8 @@
-﻿using System;
+﻿using PetApp.DataModels;
+using PetApp.Web.Adapters.DataAdapter;
+using PetApp.Web.Adapters.Interfaces;
+using PetApp.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +12,29 @@ namespace PetApp.Web.Controllers
 {
     public class HomeController : Controller
     {
+        IPetAdapter db;
+
+        public HomeController()
+        {
+            db = new PetAdapter();
+        }
+
+        public HomeController(IPetAdapter _db)
+        {
+            db = _db;
+        }
+
         public ActionResult Index()
         {
-            return View();
-        }
+            HomeVM model = new HomeVM();
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            model.Pets = db.GetPets();
 
-            return View();
-        }
+            model.SetFeaturedPet();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            model.Shelters = db.GetShelters();
 
-            return View();
+            return View(model);
         }
     }
 }

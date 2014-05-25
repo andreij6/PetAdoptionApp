@@ -9,13 +9,28 @@ namespace PetApp.DataModels
     public class Pet
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
-        public string Type { get; set; }
+
+        public PetType Type { get; set; }
+
         public bool Adopted { get; set; }
+
+        public int ShelterId { get; set; }
+
+        public Shelter Shelter { get; set; }
 
         public Pet()
         {
             this.Adopted = false;
         }
+    }
+
+    public enum PetType
+    {
+        Dog = 1,
+        Cat,
+        Lizard,
+        Hamster
     }
 }
