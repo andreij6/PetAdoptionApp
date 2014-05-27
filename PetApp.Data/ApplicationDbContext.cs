@@ -26,6 +26,7 @@ namespace PetApp.Data
         public DbSet<Shelter> Shelters { get; set; }
         public DbSet<Volunteer> Volunteers { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<Detail> Details { get; set; }
         
     }
 }

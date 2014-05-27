@@ -11,6 +11,7 @@ namespace PetApp.Web.Models
         public Pet FeaturedPet { get; set; }
         public List<Shelter> Shelters { get; set; }
         public List<Pet> Pets { get; set; }
+        public int Page { get; set; }
 
         public void SetFeaturedPet()
         {

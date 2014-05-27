@@ -24,17 +24,78 @@ namespace PetApp.Web.Controllers
             db = _db;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int page = 0, PetType filter = PetType.All)
         {
+            ViewData["message"] = TempData["message"];
+
             HomeVM model = new HomeVM();
 
-            model.Pets = db.GetPets();
+            model.Pets = db.GetPets(filter);
 
             model.SetFeaturedPet();
 
-            model.Shelters = db.GetShelters();
+            model.Shelters = db.GetShelters(page);
+
+            model.Page = page + 1;
 
             return View(model);
+        }
+
+        public ActionResult PetDetail(string petName)
+        {
+            Pet pet = db.GetPetByName(petName);
+            
+            return View(pet);
+        }
+
+        [HttpGet]
+        public ActionResult Adoption(string petName)
+        {
+            Pet pet = db.GetPetByName(petName);
+
+            return View(pet);
+        }
+
+        [HttpPost]
+        public ActionResult Adoption(AdoptVM adopt)
+        {
+            db.WantsToAdopt(adopt);
+            TempData["message"] = "Pending approval";
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Walk(string dogName)
+        {
+            WalkTheDogVM walkem = new WalkTheDogVM();
+
+            walkem.dogName = dogName;
+
+            return View(walkem);
+        }
+
+        [HttpPost]
+        public ActionResult Walk(WalkTheDogVM request)
+        {
+            db.WalkRequest(request);
+            TempData["message"] = "Pending approval";
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult PetAppAdmin()
+        {
+            PetAppVM information = new PetAppVM();
+
+            db.PopulateAdmin(information);
+
+            return View(information);
+        }
+
+        public ActionResult Shelter(int Id)
+        {
+            Shelter shelter = db.GetShelter(Id);
+
+            return View(shelter);
         }
     }
 }

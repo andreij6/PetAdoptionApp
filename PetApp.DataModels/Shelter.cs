@@ -15,5 +15,12 @@ namespace PetApp.DataModels
         public List<Pet> Pets { get; set; }
 
         public string Location { get; set; }
+
+        public string Photo { get; set; }
+
+        public Shelter()
+        {
+            this.Pets = new List<Pet>();
+        }
     }
 }

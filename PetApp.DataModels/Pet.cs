@@ -20,6 +20,8 @@ namespace PetApp.DataModels
 
         public Shelter Shelter { get; set; }
 
+        public string Photo { get; set; }
+
         public Pet()
         {
             this.Adopted = false;
@@ -31,6 +33,7 @@ namespace PetApp.DataModels
         Dog = 1,
         Cat,
         Lizard,
-        Hamster
+        Hamster,
+        All
     }
 }

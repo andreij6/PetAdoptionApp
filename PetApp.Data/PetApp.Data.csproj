@@ -69,6 +69,50 @@
     <Compile Include="Migrations\201405251718512_addedPetType.Designer.cs">
       <DependentUpon>201405251718512_addedPetType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405251841276_addedPhotoProp.cs" />
+    <Compile Include="Migrations\201405251841276_addedPhotoProp.Designer.cs">
+      <DependentUpon>201405251841276_addedPhotoProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405251948223_volunteerTableUpdate.cs" />
+    <Compile Include="Migrations\201405251948223_volunteerTableUpdate.Designer.cs">
+      <DependentUpon>201405251948223_volunteerTableUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405252117342_addedRequestedStart.cs" />
+    <Compile Include="Migrations\201405252117342_addedRequestedStart.Designer.cs">
+      <DependentUpon>201405252117342_addedRequestedStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260029385_statusVol.cs" />
+    <Compile Include="Migrations\201405260029385_statusVol.Designer.cs">
+      <DependentUpon>201405260029385_statusVol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260052297_detailsVolunteer.cs" />
+    <Compile Include="Migrations\201405260052297_detailsVolunteer.Designer.cs">
+      <DependentUpon>201405260052297_detailsVolunteer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260055299_detailToDB.cs" />
+    <Compile Include="Migrations\201405260055299_detailToDB.Designer.cs">
+      <DependentUpon>201405260055299_detailToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260112587_scheduleTimeSpan.cs" />
+    <Compile Include="Migrations\201405260112587_scheduleTimeSpan.Designer.cs">
+      <DependentUpon>201405260112587_scheduleTimeSpan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260325287_detailSchamaChange.cs" />
+    <Compile Include="Migrations\201405260325287_detailSchamaChange.Designer.cs">
+      <DependentUpon>201405260325287_detailSchamaChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260336112_changeDateTimetoString.cs" />
+    <Compile Include="Migrations\201405260336112_changeDateTimetoString.Designer.cs">
+      <DependentUpon>201405260336112_changeDateTimetoString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260347442_addedId.cs" />
+    <Compile Include="Migrations\201405260347442_addedId.Designer.cs">
+      <DependentUpon>201405260347442_addedId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405260358581_fixedDateTime.cs" />
+    <Compile Include="Migrations\201405260358581_fixedDateTime.Designer.cs">
+      <DependentUpon>201405260358581_fixedDateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seeder.cs" />
@@ -95,6 +139,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405251718512_addedPetType.resx">
       <DependentUpon>201405251718512_addedPetType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405251841276_addedPhotoProp.resx">
+      <DependentUpon>201405251841276_addedPhotoProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405251948223_volunteerTableUpdate.resx">
+      <DependentUpon>201405251948223_volunteerTableUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405252117342_addedRequestedStart.resx">
+      <DependentUpon>201405252117342_addedRequestedStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260029385_statusVol.resx">
+      <DependentUpon>201405260029385_statusVol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260052297_detailsVolunteer.resx">
+      <DependentUpon>201405260052297_detailsVolunteer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260055299_detailToDB.resx">
+      <DependentUpon>201405260055299_detailToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260112587_scheduleTimeSpan.resx">
+      <DependentUpon>201405260112587_scheduleTimeSpan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260325287_detailSchamaChange.resx">
+      <DependentUpon>201405260325287_detailSchamaChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260336112_changeDateTimetoString.resx">
+      <DependentUpon>201405260336112_changeDateTimetoString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260347442_addedId.resx">
+      <DependentUpon>201405260347442_addedId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405260358581_fixedDateTime.resx">
+      <DependentUpon>201405260358581_fixedDateTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

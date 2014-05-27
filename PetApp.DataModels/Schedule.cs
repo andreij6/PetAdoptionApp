@@ -18,5 +18,12 @@ namespace PetApp.DataModels
 
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+
+        public TimeSpan Booked { get; set; }
+
+        public void calcAvailability()
+        {
+            this.Booked = this.EndTime - this.StartTime;
+        }
     }
 }
